@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="uk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>LiLiAi — інтерактивний альбом, V70</title>
+<link rel="stylesheet" href="css/style.css"></head><body>
+<div id="app">
+<section id="cover" class="page active">
+<img id="coverVideo" class="full coverImage" src="images/page_asset_01.jpg" alt="LiLiAi — модель у студії звукозапису">
+<button id="coverArrow" class="hit" aria-label="Открыть список песен"></button>
+</section>
+<section id="page2" class="page">
+  <img class="full" src="images/page_asset_02.png" alt="LiLiAi — автори та виконавці">
+  <button id="page2NextHit" class="hit" aria-label="Перейти до вибору пісень"></button>
+</section>
+<section id="page3" class="page">
+  <img class="full" src="images/page_asset_03.png" alt="LiLiAi — вибір пісні">
+  <div id="songHits"></div>
+  <button id="page3BackHit" class="hit" aria-label="Повернутися до сторінки авторів"></button>
+</section>
+<section id="player" class="page">
+  <img id="playerBg" class="full" alt="">
+  <div id="playerDim" class="playerDim"></div>
+  <div id="trackTitleCue" class="trackTitleCue"></div>
+  <div id="authorCue" class="authorCue"><div class="authorLabel">Вірші</div><div id="authorName"></div></div>
+  <div id="controlPanel" class="controlPanel">
+    <div class="playerTopInfo"><div id="panelTrackName"></div><div class="panelArtist">Лілія Остапенко</div></div>
+  <button id="homeHit" class="homeControl" aria-label="На сторінку з 12 піснями" title="На сторінку з піснями"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4.5 3.8 21.6a2.4 2.4 0 0 0 3.1 3.7L9 23.5v17.2A2.8 2.8 0 0 0 11.8 43.5H36.2A2.8 2.8 0 0 0 39 40.7V23.5l2.1 1.8a2.4 2.4 0 1 0 3.1-3.7L24 4.5ZM19 43.5V29h10v14.5H19Z"/></svg></button>
+    <div class="centerControls">
+      <button id="prevHit" class="roundControl" aria-label="Попередня пісня"><svg viewBox="0 0 48 48"><path d="M10 10v28M38 10L16 24l22 14z"/></svg></button>
+      <button id="playHit" class="roundControl mainControl" aria-label="Пауза"><svg id="playIcon" viewBox="0 0 48 48"><path d="M16 10v28M32 10v28"/></svg></button>
+      <button id="nextHit" class="roundControl" aria-label="Наступна пісня"><svg viewBox="0 0 48 48"><path d="M38 10v28M10 10l22 14-22 14z"/></svg></button>
+    </div>
+    <div class="timelineArea">
+      <div id="seekBubble" class="seekBubble">00:00</div>
+      <div class="timeRow"><span id="currentPlaying">00:00</span><span id="totalPlaying">00:00</span></div>
+      <div id="dynamicTimeline" class="dynamicTimeline"><div id="dynamicProgress" class="dynamicProgress"></div><div id="dynamicKnob" class="dynamicKnob"></div></div>
+    </div>
+  </div>
+</section>
+<section id="lastPage" class="page">
+  <img class="lastBg" src="images/page_asset_04.png" alt="">
+
+  <button id="lastBackHit" class="lastHit" aria-label="Назад к плееру"></button>
+  <button id="lastHomeHit" class="lastHit" aria-label="На страницу песен"></button>
+</section>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body></html>
