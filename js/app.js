@@ -54,7 +54,7 @@ $('homeHit').addEventListener('click',e=>{e.stopPropagation();audio.pause();canc
 const timeline=$('dynamicTimeline');
 timeline.addEventListener('pointerdown',e=>{if(e.button!==undefined&&e.button!==0)return;scrubbing=true;resumeAfterScrub=!audio.paused;clearTimeout(panelTimer);$('controlPanel').classList.add('visible');audio.pause();timeline.setPointerCapture?.(e.pointerId);seekTo(e.clientX);e.preventDefault()});
 timeline.addEventListener('pointermove',e=>{if(scrubbing){seekTo(e.clientX);e.preventDefault()}});
-function finishScrub(e){if(!scrubbing)return;seekTo(e.clientX);scrubbing=false;if(timeline.hasPointerCapture?.(e.pointerId))timeline.releasePointerCapture(e.pointerId);hideScrubTime();if(resumeAfterScrub){audio.play().then(()=>{setPlayIcon(false);startAnimation();showPanel()}).catch(()=>{})}else setPlayIcon(true);e.preventDefault()}
+function finishScrub(e){if(!scrubbing)return;if(e.type==='pointerup')seekTo(e.clientX);scrubbing=false;if(timeline.hasPointerCapture?.(e.pointerId))timeline.releasePointerCapture(e.pointerId);hideScrubTime();if(resumeAfterScrub){audio.play().then(()=>{setPlayIcon(false);startAnimation();showPanel()}).catch(()=>{})}else setPlayIcon(true);e.preventDefault()}
 timeline.addEventListener('pointerup',finishScrub);timeline.addEventListener('pointercancel',finishScrub);
 // Tap anywhere outside the visible controls reveals the panel without pausing audio.
 // If the user does nothing, it auto-hides after 2 seconds. While paused it stays available.
