@@ -1,0 +1,6 @@
+{
+  "appId": "com.liliai.album",
+  "appName": "LiLiAi",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
