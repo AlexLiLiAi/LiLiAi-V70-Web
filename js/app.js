@@ -1,7 +1,7 @@
 const pages={cover:document.getElementById('cover'),page2:document.getElementById('page2'),page3:document.getElementById('page3'),player:document.getElementById('player'),last:document.getElementById('lastPage')};
 const audio=new Audio();audio.preload='auto';
 let track=0,raf=0,turning=false,panelTimer=null,cueTimers=[],scrubbing=false,resumeAfterScrub=false;
-const authors=['Віра Коваль','Віктор Герасименко','Лілія Остапенко','Ніна Івашкевіч','Віктор Герасименко','Лілія Остапенко','Людмила Плевако','Віктор Герасименко','Віктор Герасименко','Валентин Любченко','Василь Іваніцький','Віктор Герасименко'];
+const authors=['Віра Коваль','Віктор Герасименко','Лілія Остапенко','Ніна Івашкевіч','Віктор Герасименко','Лілія Остапенко','Людмила Плевако','Віктор Герасименко','Віктор Герасименко','Валентина Любченко','Василь Іваніцький','Віктор Герасименко'];
 const $=id=>document.getElementById(id);
 function pageTurn(fromId,toId,direction='forward'){
  if(turning)return false;const from=pages[fromId],to=pages[toId];if(!from||!to||fromId===toId)return false;turning=true;to.classList.add('active');from.classList.add('active');
