@@ -1,4 +1,4 @@
-const pages={cover:document.getElementById('cover'),page2:document.getElementById('page2'),page3:document.getElementById('page3'),player:document.getElementById('player')
+const pages={cover:document.getElementById('cover'),page2:document.getElementById('page2'),page3:document.getElementById('page3'),player:document.getElementById('player')};
 const audio=new Audio();audio.preload='auto';
 let track=0,raf=0,turning=false,panelTimer=null,cueTimers=[],scrubbing=false,resumeAfterScrub=false;
 const authors=['Віра Коваль','Віктор Герасименко','Лілія Остапенко','Ніна Івашкевіч','Віктор Герасименко','Лілія Остапенко','Людмила Плевако','Віктор Герасименко','Віктор Герасименко','Валентина Любченко','Василь Іваніцький','Віктор Герасименко'];
